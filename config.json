@@ -1,0 +1,61 @@
+{
+  "name": "Dynamic Report Push",
+
+  "namespace": "DynamicReportPush\\DynamicReportPushExternalModule",
+
+  "authors": [
+    {
+      "name": "Gary Rains",
+      "email": "gary.rains@duke.edu",
+      "institution": "Duke University School of Medicine"
+    }
+  ],
+
+"description": "Module that allows for data from a report in one project to be pushed into a different project",
+  
+"permissions": [
+		],
+	
+		"no-auth-pages": [
+	                "push_now"
+	        ],
+        
+
+"links": {
+		"control-center": [
+		],
+		"project": [
+			{
+				"name": "Dynamic Report Push",
+				"icon": "report",
+				"url": "push_now.php?NOAUTH"
+			}
+		]
+	},
+
+  "project-settings": [
+    {
+      "key": "project-id",
+      "name": "Project in Which to Push Data from Dynamic Report",
+      "required": true,
+      "type": "text"
+    },
+    {
+      "key": "token1",
+      "name": "Token for current project",
+      "type": "text"
+    },
+{
+      "key": "token2",
+      "name": "Token for project where data will be pushed",
+      "type": "text"
+    },
+{
+      "key": "report_id",
+      "name": "ID for Dynamic Report that will be pushed",
+      "type": "text"
+    }
+  ]
+}
+
+  
