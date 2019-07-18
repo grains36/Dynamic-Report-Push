@@ -35,27 +35,65 @@
 
   "project-settings": [
     {
+      "key": "report-push",
+      "name": "Report Push",
+      "type": "sub_settings",
+      "repeatable": true,
+      "required": false,
+      "sub_settings":[
+    {
       "key": "project-id",
-      "name": "Project in Which to Push Data from Dynamic Report",
-      "required": true,
-      "type": "text"
+      "name": "Receiving project's PID",
+      "type": "text",
+      "required": true
     },
     {
       "key": "token1",
       "name": "Token for current project",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
 {
       "key": "token2",
       "name": "Token for project where data will be pushed",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
 {
       "key": "report_id",
       "name": "ID for Dynamic Report that will be pushed",
-      "type": "text"
-    }
+      "type": "text",
+      "required": true
+    },
+    {
+              "key": "event_name",
+              "name": "ADD Event Name (use when going from classic to longitudinal. Leave blank if both projects are classic)",
+              "type": "text"
+   },
+   {
+                 "key": "long_to_classic",
+                 "name": "Delete Event Name (Use when going from longitudinal to classic project)",
+                 "choices": [
+		   				{
+		   					"name": "Delete event name field",
+		   					"value": "1"
+		   				}
+		   			],
+			"type":"radio"
+   },
+   {
+                    "key": "repeat_to_classic",
+                    "name": "Delete Repeating Instrument and Instance fields (Use when going from repeating to classic project)",
+                    "choices": [
+   		   				{
+   		   					"name": "Delete repeating fields",
+   		   					"value": "1"
+   		   				}
+   		   			],
+   			"type":"radio"
+   }
   ]
-}
+ }
+]
+    }
 
-  
