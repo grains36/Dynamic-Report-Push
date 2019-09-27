@@ -11,7 +11,7 @@
     }
   ],
 
-"description": "Module that allows for data from a report in one project to be pushed into a different project",
+"description": "Module that allows for data from a report in one project to be pushed into one or more other projects",
   
 "permissions": [
 		],
@@ -43,7 +43,7 @@
       "sub_settings":[
     {
       "key": "project-id",
-      "name": "Receiving project's PID",
+      "name": "Receiving project Info (Title, PID, etc",
       "type": "text",
       "required": true
     },
@@ -67,30 +67,18 @@
     },
     {
               "key": "event_name",
-              "name": "ADD Event Name (use when going from classic to longitudinal. Leave blank if both projects are classic)",
+              "name": "ADD Event Name (use when going from classic to longitudinal. Otherwise leave blank)",
               "type": "text"
    },
    {
                  "key": "long_to_classic",
                  "name": "Delete Event Name (Use when going from longitudinal to classic project)",
-                 "choices": [
-		   				{
-		   					"name": "Delete event name field",
-		   					"value": "1"
-		   				}
-		   			],
-			"type":"radio"
+		  "type": "checkbox"
    },
    {
                     "key": "repeat_to_classic",
                     "name": "Delete Repeating Instrument and Instance fields (Use when going from repeating to classic project)",
-                    "choices": [
-   		   				{
-   		   					"name": "Delete repeating fields",
-   		   					"value": "1"
-   		   				}
-   		   			],
-   			"type":"radio"
+   		    "type": "checkbox"
    }
   ]
  }
