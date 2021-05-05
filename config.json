@@ -17,7 +17,8 @@
 		],
 	
 		"no-auth-pages": [
-	                "push_now"
+	                "push_now1",
+	                "push_now2"
 	        ],
         
 
@@ -26,17 +27,22 @@
 		],
 		"project": [
 			{
-				"name": "Dynamic Report Push",
+				"name": "DRP1",
 				"icon": "report",
-				"url": "push_now.php?NOAUTH"
+				"url": "push_now1.php?NOAUTH"
+			},
+			{
+				"name": "DRP2",
+			        "icon": "report",
+				"url": "push_now2.php?NOAUTH"
 			}
 		]
 	},
 
   "project-settings": [
     {
-      "key": "report-push",
-      "name": "Report Push",
+      "key": "report-push1",
+      "name": "Report Push1",
       "type": "sub_settings",
       "repeatable": true,
       "required": false,
@@ -79,8 +85,68 @@
                     "key": "repeat_to_classic",
                     "name": "Delete Repeating Instrument and Instance fields (Use when going from repeating to classic project)",
    		    "type": "checkbox"
+   },
+   {
+                     "key": "onetime1",
+                     "name": "One-Time-Push Flag",
+		     "type": "checkbox",
+		     "repeatable": false
    }
-  ]
+  ]					
+ },
+ {
+       "key": "report-push2",
+       "name": "Report Push2",
+       "type": "sub_settings",
+       "repeatable": true,
+       "required": false,
+       "sub_settings":[
+     {
+       "key": "project-id2",
+       "name": "Receiving project Info (Title, PID, etc",
+       "type": "text",
+       "required": false
+     },
+     {
+       "key": "token3",
+       "name": "Token for current project",
+       "type": "text",
+       "required": false
+     },
+ {
+       "key": "token4",
+       "name": "Token for project where data will be pushed",
+       "type": "text",
+       "required": false
+     },
+ {
+       "key": "report_id2",
+       "name": "ID for Dynamic Report that will be pushed",
+       "type": "text",
+       "required": false
+     },
+     {
+               "key": "event_name2",
+               "name": "ADD Event Name (use when going from classic to longitudinal. Otherwise leave blank)",
+               "type": "text"
+    },
+    {
+                  "key": "long_to_classic2",
+                  "name": "Delete Event Name (Use when going from longitudinal to classic project)",
+ 		  "type": "checkbox"
+    },
+    {
+                     "key": "repeat_to_classic2",
+                     "name": "Delete Repeating Instrument and Instance fields (Use when going from repeating to classic project)",
+    		    "type": "checkbox"
+    },
+   {
+                     "key": "onetime2",
+		     "name": "One-Time-Push Flag",
+		     "type": "checkbox",
+		     "repeatable": false
+   }
+   ]
  }
 ]
     }
