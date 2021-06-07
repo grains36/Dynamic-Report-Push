@@ -180,6 +180,7 @@ $repeattoclassic = $settings['repeat_to_classic2']['value'];
 
 									$result = null;
 									$shark = null;
+									$tiger = null;
 									$result2 = null;
 			            			$data = null;
 			            			$result3 = null;
