@@ -40,112 +40,120 @@
 	},
 
   "project-settings": [
-    {
-      "key": "report-push1",
-      "name": "Report Push1",
+   {
+        "key": "onetime1",
+        "name": "DRP1-Check to use flag",
+        "type": "checkbox"
+   },
+   {
+   	"key": "onetime1_var",
+        "name": "DRP1-Field used for flagging one-time push",
+        "type": "field-list"
+   },
+   {
+      "key": "report-push",
+      "name": "DRP1-Report Push",
       "type": "sub_settings",
       "repeatable": true,
       "required": false,
       "sub_settings":[
     {
       "key": "project-id",
-      "name": "Receiving project Info (Title, PID, etc",
+      "name": "DRP1-Receiving project Info (Title, PID, etc",
       "type": "text",
       "required": true
     },
     {
       "key": "token1",
-      "name": "Token for current project",
+      "name": "DRP1-Token for current project",
       "type": "text",
       "required": true
     },
 {
       "key": "token2",
-      "name": "Token for project where data will be pushed",
+      "name": "DRP1-Token for project where data will be pushed",
       "type": "text",
       "required": true
     },
 {
       "key": "report_id",
-      "name": "ID for Dynamic Report that will be pushed",
+      "name": "DRP1-ID for Dynamic Report that will be pushed",
       "type": "text",
       "required": true
     },
     {
               "key": "event_name",
-              "name": "ADD Event Name (use when going from classic to longitudinal. Otherwise leave blank)",
+              "name": "DRP1-ADD Event Name (use when going from classic to longitudinal. Otherwise leave blank)",
               "type": "text"
    },
    {
                  "key": "long_to_classic",
-                 "name": "Delete Event Name (Use when going from longitudinal to classic project)",
+                 "name": "DRP1-Delete Event Name (Use when going from longitudinal to classic project)",
 		  "type": "checkbox"
    },
    {
-                    "key": "repeat_to_classic",
-                    "name": "Delete Repeating Instrument and Instance fields (Use when going from repeating to classic project)",
+            "key": "repeat_to_classic",
+            "name": "DRP1-Delete Repeating Instrument and Instance fields (Use when going from repeating to classic project)",
    		    "type": "checkbox"
-   },
-   {
-                     "key": "onetime1",
-                     "name": "One-Time-Push Flag",
-		     "type": "checkbox",
-		     "repeatable": false
    }
   ]					
- },
- {
+   },
+   {
+       "key": "onetime2",
+       "name": "DRP2-Check to use flag",
+       "type": "checkbox"
+   },
+   {
+        "key": "onetime2_var",
+        "name": "DRP2-Field used for flagging one-time push",
+        "type": "field-list"
+   },
+   {
        "key": "report-push2",
-       "name": "Report Push2",
+       "name": "DRP2-Report Push",
        "type": "sub_settings",
        "repeatable": true,
        "required": false,
        "sub_settings":[
      {
        "key": "project-id2",
-       "name": "Receiving project Info (Title, PID, etc",
+       "name": "DRP2-Receiving project Info (Title, PID, etc",
        "type": "text",
        "required": false
      },
      {
        "key": "token3",
-       "name": "Token for current project",
+       "name": "DRP2-Token for current project",
        "type": "text",
        "required": false
      },
  {
        "key": "token4",
-       "name": "Token for project where data will be pushed",
+       "name": "DRP2-Token for project where data will be pushed",
        "type": "text",
        "required": false
      },
  {
        "key": "report_id2",
-       "name": "ID for Dynamic Report that will be pushed",
+       "name": "DRP2-ID for Dynamic Report that will be pushed",
        "type": "text",
        "required": false
      },
      {
                "key": "event_name2",
-               "name": "ADD Event Name (use when going from classic to longitudinal. Otherwise leave blank)",
+               "name": "DRP2-ADD Event Name (use when going from classic to longitudinal. Otherwise leave blank)",
                "type": "text"
     },
     {
                   "key": "long_to_classic2",
-                  "name": "Delete Event Name (Use when going from longitudinal to classic project)",
+                  "name": "DRP2-Delete Event Name (Use when going from longitudinal to classic project)",
  		  "type": "checkbox"
     },
     {
                      "key": "repeat_to_classic2",
-                     "name": "Delete Repeating Instrument and Instance fields (Use when going from repeating to classic project)",
+                     "name": "DRP2-Delete Repeating Instrument and Instance fields (Use when going from repeating to classic project)",
     		    "type": "checkbox"
-    },
-   {
-                     "key": "onetime2",
-		     "name": "One-Time-Push Flag",
-		     "type": "checkbox",
-		     "repeatable": false
-   }
+     }
    ]
  }
 ]

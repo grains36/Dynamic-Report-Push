@@ -22,6 +22,9 @@ $ProjectID = $settings['project-id']['value'];
 if (!is_array($ProjectID)) {
 	$ProjectID = array($ProjectID);
 }
+
+$onetime = $settings['onetime1']['value'];
+$onetimevar = $settings['onetime1_var']['value'];
 // create an array with values of each instance of a dynamic report
 for($i=0; $i <$reportCount; ++$i) {
 
@@ -32,7 +35,6 @@ $pushtoken = $settings['token2']['value'];
 $eventname = $settings['event_name']['value'];
 $longtoclassic = $settings['long_to_classic']['value'];
 $repeattoclassic = $settings['repeat_to_classic']['value'];
-$onetime = $settings['onetime1']['value'];
 
 			$data = array(
 			    'token' => $curtoken[$i],
@@ -122,20 +124,26 @@ $onetime = $settings['onetime1']['value'];
 
 			curl_close($ch);
 
-		if (($output < '1') or ($onetime[$i] <'1')){
+
+		//create array tiger to add push flag result to current project
+		$tiger = json_decode($result, true);  //convert json file to a php array
+
+		if (($output < '1') or ($onetime <'1')){
 		    goto drpendnow;
 		    }
 
 
 
 			 // add onetime flag data to data file
-			            foreach ($shark as &$record) {
-			            if (isset($shark[$i])) {
-						 $record ['drp_onetime1'] = 1;
+			 if ($onetime == 1){
+			            foreach ($tiger as &$record) {
+			            if (isset($tiger[$i])) {
+						 $record [$onetimevar] = 1;
+			}
 			}
 			}
 
-						$result3 = json_encode($shark, JSON_PRETTY_PRINT); //convert data to json
+						$result3 = json_encode($tiger, JSON_PRETTY_PRINT); //convert data to json
 
 						//print_r ($result3);
 
@@ -173,6 +181,7 @@ $onetime = $settings['onetime1']['value'];
 
 						$result = null;
 						$shark = null;
+						$tiger = null;
 						$result2 = null;
             			$data = null;
             			$result3 = null;
