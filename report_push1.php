@@ -73,12 +73,12 @@ $repeattoclassic = $settings['repeat_to_classic']['value'];
 			 $record ['redcap_event_name'] = $eventname[$i];
 			}
 			if ($longtoclassic[$i] == 1) {
-				unset($record[redcap_event_name]);
+				unset($record['redcap_event_name']); 
 			}
 
 			if ($repeattoclassic[$i] == 1) {
-			    unset($record[redcap_repeat_instrument]);
-			    unset($record[redcap_repeat_instance]);
+			    unset($record['redcap_repeat_instrument']);
+			    unset($record['redcap_repeat_instance']);
 			}
 			}
 
