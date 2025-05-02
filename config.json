@@ -12,15 +12,15 @@
   ],
 
 "description": "Module that allows for data from a report in one project to be pushed into one or more other projects",
-  
+
 "permissions": [
 		],
-	
+
 		"no-auth-pages": [
 	                "push_now1",
 	                "push_now2"
 	        ],
-        
+
 
 "links": {
 		"control-center": [
@@ -38,6 +38,7 @@
 			}
 		]
 	},
+  "framework-version": 13,
 
   "project-settings": [
    {
@@ -66,13 +67,13 @@
     {
       "key": "token1",
       "name": "DRP1-Token for current project",
-      "type": "text",
+      "type": "password",
       "required": true
     },
 {
       "key": "token2",
       "name": "DRP1-Token for project where data will be pushed",
-      "type": "text",
+      "type": "password",
       "required": true
     },
 {
@@ -96,7 +97,7 @@
             "name": "DRP1-Delete Repeating Instrument and Instance fields (Use when going from repeating to classic project)",
    		    "type": "checkbox"
    }
-  ]					
+  ]
    },
    {
        "key": "onetime2",
@@ -124,13 +125,13 @@
      {
        "key": "token3",
        "name": "DRP2-Token for current project",
-       "type": "text",
+       "type": "password",
        "required": false
      },
  {
        "key": "token4",
        "name": "DRP2-Token for project where data will be pushed",
-       "type": "text",
+       "type": "password",
        "required": false
      },
  {
