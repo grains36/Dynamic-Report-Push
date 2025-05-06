@@ -20,8 +20,10 @@
 	                "push_now1",
 	                "push_now2"
 	        ],
-
-
+	        "no-csrf-pages": [
+			     "push_now1",
+	                "push_now2"
+            ],
 "links": {
 		"control-center": [
 		],
@@ -38,7 +40,7 @@
 			}
 		]
 	},
-  "framework-version": 13,
+  "framework-version": 14,
 
   "project-settings": [
    {
